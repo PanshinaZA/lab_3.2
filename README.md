@@ -23,13 +23,13 @@ def group_by_department(employees):
 
     Результат:
         - dict: словарь {отдел: [список имен]}."""
-    g = {}
+    dict = {}
     
     for name, department in employees:
-        if department not in g:
-            g[department] = []
-        g[department].append(name)
-    return g
+        if department not in dict:
+            dict[department] = []
+        dict[department].append(name)
+    return dict
 
 employee_list = [("Иванов", "IT"), ("Петров", "Sales"), ("Сидорова", "IT"), ("Кузнецов", "Marketing"), ("Алексеева", "Sales")]
 print(group_by_department(employee_list))
