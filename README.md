@@ -12,8 +12,29 @@
 ## Вариант 17
 Напишите функцию, которая группирует список сотрудников по их отделу.
 ```
+# Выполнила: Паньшина З.А.
+# Группа: АБП-231
 
+def group_by_department(employees):
+    """Сгруппировать сотрудников 'employees' по отделам.
+
+    Параметры:
+        - employees (list): список кортежей (имя, отдел).
+
+    Результат:
+        - dict: словарь {отдел: [список имен]}."""
+    g = {}
+    
+    for name, department in employees:
+        if department not in g:
+            g[department] = []
+        g[department].append(name)
+    return g
+
+employee_list = [("Иванов", "IT"), ("Петров", "Sales"), ("Сидорова", "IT"), ("Кузнецов", "Marketing"), ("Алексеева", "Sales")]
+print(group_by_department(employee_list))
 ```
+<img width="973" height="39" alt="image" src="https://github.com/user-attachments/assets/3e130098-0af2-4de7-8821-70c4639077b0" />
 
 ## Выводы:
 В ходе выполнения лабораторной работы были освоены коллекции dict и set в Python, а также изучены их методы и операции.
